@@ -1,11 +1,11 @@
 @use 'base/reset';
-@use 'base/utility';
 @use 'base/variables';
 @use 'base/mixins';
 
 @use 'modules/hamburger';
 @use 'modules/header';
-@use 'modules/navigation';
+@use 'modules/download';
+@use 'modules/footer';
 
 html {
 	font-family: "Lexend Deca", Helvetica, sans-serif;
@@ -25,4 +25,5 @@ h6 {
 
 .container {
 	max-width: 69rem;
+	margin-inline: auto;
 }

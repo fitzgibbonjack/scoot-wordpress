@@ -1,0 +1,61 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.download {
+	padding-block: 5.5rem;
+	padding-inline: 2rem;
+	background-color: var(--clr-navy-400);
+
+	background-image: url("/assets/patterns/semi-circles.svg");
+	background-repeat: no-repeat;
+	background-size: 400%;
+	background-position: bottom 0 right 25%;
+}
+
+.download__title {
+	padding-block-end: 2.5rem;
+	letter-spacing: -1.4px;
+	text-align: center;
+	font-size: 2rem;
+	color: white;
+}
+
+.download__links {
+	@include set-flex(center, space-between);
+	@include reset-list;
+	gap: 0.8rem;
+	max-width: 16rem;
+	margin-inline: auto;
+}
+
+@media only screen and (min-width: $break-tablet) {
+	.download {
+		padding-block: 3.875rem;
+		background-size: 180%;
+		background-position: bottom center;
+	}
+	.download__title {
+		font-size: 3rem;
+		width: 28rem;
+		margin-inline: auto;
+	}
+}
+
+@media only screen and (min-width: $break-desktop) {
+	.download {
+		padding-block: 6.375rem;
+		background-size: 80%;
+		background-position: bottom 0 right -50%;
+		.container {
+			@include set-flex(center, space-between);
+		}
+	}
+	.download__title {
+		text-align: left;
+		padding-block-end: 0;
+		margin-inline: unset;
+	}
+	.download__links {
+		margin-inline: unset;
+	}
+}

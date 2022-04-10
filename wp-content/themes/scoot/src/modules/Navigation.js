@@ -1,7 +1,7 @@
 export default class Navigation {
 	constructor() {
-		this.toggleButton = document.querySelector(".nav__toggle");
-		this.navigation = document.querySelector(".nav__links");
+		this.toggleButton = document.querySelector(".header__toggle");
+		this.navigation = document.querySelector(".header__links");
 		this.events();
 	}
 
@@ -18,11 +18,13 @@ export default class Navigation {
 	}
 
 	openNavigation() {
+		window.addEventListener("resize", () => this.closeNavigation());
 		this.toggleButton.setAttribute("aria-expanded", "true");
 		document.body.classList.add("nav-open");
 	}
 
 	closeNavigation() {
+		window.removeEventListener("resize", () => this.closeNavigation());
 		this.toggleButton.setAttribute("aria-expanded", "false");
 		document.body.classList.remove("nav-open");
 	}

@@ -8,10 +8,11 @@
 	padding-inline: 2rem;
 	background-color: white;
 	transition: top 0.3s ease-in-out;
+	z-index: 1;
 }
 
 .header-hidden .header--main {
-	top: calc($header-height * -1);
+	top: -8.5rem;
 }
 
 .header__nav {
@@ -29,5 +30,121 @@
 		@include set-flex(center, space-between);
 		gap: 3.6rem;
 		flex-grow: 1;
+	}
+}
+
+// NAVIGATION
+$nav-sidebar-width: 16rem;
+
+.header__links {
+	@include reset-list;
+	@include set-flex(unset, unset, column);
+	background-color: var(--clr-navy-500);
+	transition: all 0.5s ease-in-out;
+	padding-block-start: 4rem;
+	padding-inline: 2rem;
+	width: $nav-sidebar-width;
+	gap: 1.5rem;
+	position: fixed;
+	inset-inline: -80vw auto;
+	inset-block: $header-height 0;
+	visibility: hidden;
+
+	a {
+		color: #ffffff;
+		font-weight: 700;
+		text-decoration: none;
+		font-size: 1.125rem;
+	}
+
+	&::after {
+		content: "";
+		width: calc(100vw - $nav-sidebar-width);
+		height: calc(100vh - $header-height);
+		position: fixed;
+		background-color: #000000;
+		transition: inset-block-end 0.5s ease-in-out;
+		opacity: 0.7;
+		inset-inline-end: 0;
+		inset-block-end: -100vh;
+	}
+
+	li:last-of-type {
+		margin-block-start: auto;
+	}
+}
+
+.header__logo {
+	transform: translate(-50%, -50%);
+	position: absolute;
+	width: 4.68rem;
+	inset: 50%;
+}
+
+.header__cta {
+	@include reset-button;
+	margin-block-end: 1.5rem;
+	width: 100%;
+	color: white;
+	padding-block: 0.875rem;
+	background-color: var(--clr-yellow-400);
+}
+
+.nav-open {
+	overflow: hidden;
+	.header__links {
+		inset-inline-start: 0;
+		visibility: visible;
+	}
+	.header__links::after {
+		inset-block-end: 0;
+	}
+}
+
+@media only screen and (min-width: $break-tablet) {
+	$font-size: 0.9rem;
+
+	.header--main {
+		padding-inline: 2.6rem;
+	}
+
+	.header__links {
+		all: unset;
+		@include reset-list;
+		@include set-flex(center, space-between, row);
+		flex-grow: 1;
+		gap: 2rem;
+
+		&::after {
+			all: unset;
+		}
+
+		a {
+			color: var(--clr-grey-400);
+			font-size: $font-size;
+		}
+
+		li:last-of-type {
+			margin: unset;
+			display: flex;
+			flex-grow: 1;
+			justify-content: flex-end;
+		}
+	}
+
+	.header__logo {
+		all: unset;
+		width: 6.75rem;
+	}
+
+	.header__toggle {
+		display: none;
+	}
+
+	.header__cta {
+		margin-block-end: 0;
+		padding-inline: 2.4rem;
+		width: fit-content;
+		font-size: $font-size;
 	}
 }
