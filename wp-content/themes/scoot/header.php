@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
    <header class="header--main">
       <nav class="header__nav container">
-         <a href="<?php get_home_url() ?>">
+         <a href="<?php echo site_url() ?>">
             <img class="nav__logo" src="<?php echo get_theme_file_uri('/assets/logo.svg')?>" alt="Scoot logo">
          </a>
 
@@ -22,9 +22,9 @@
          </button>
 
          <ul class="nav__links" id="menu">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Locations</a></li>
-            <li><a href="#">Careers</a></li>
+            <li><a href="<?php echo site_url("/about") ?>">About</a></li>
+            <li><a href="<?php echo site_url("/locations") ?>">Locations</a></li>
+            <li><a href="<?php get_post_type_archive_link('career') ?>">Careers</a></li>
             <li><button class="nav__cta" type="button">Get Scootin</button></li>
          </ul>
       </nav>
