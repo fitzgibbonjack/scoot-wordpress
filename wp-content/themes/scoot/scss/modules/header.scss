@@ -1,0 +1,33 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.header--main {
+	position: fixed;
+	inset: 0 0 auto 0;
+	height: $header-height;
+	padding-inline: 2rem;
+	background-color: white;
+	transition: top 0.3s ease-in-out;
+}
+
+.header-hidden .header--main {
+	top: calc($header-height * -1);
+}
+
+.header__nav {
+	@include set-flex(center, unset);
+	position: relative;
+	margin-inline: auto;
+	height: 100%;
+}
+
+@media only screen and (min-width: $break-tablet) {
+	.header--main {
+		height: 6rem;
+	}
+	.header__nav {
+		@include set-flex(center, space-between);
+		gap: 3.6rem;
+		flex-grow: 1;
+	}
+}

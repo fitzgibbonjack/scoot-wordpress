@@ -1,0 +1,18 @@
+:root {
+	--clr-yellow-400: #fcb72b;
+	--clr-yellow-300: #fff4df;
+	--clr-navy-500: #333a44;
+	--clr-navy-400: #495567;
+	--clr-grey-400: #939caa;
+	--clr-grey-300: #e5ecf4;
+	--clr-grey-200: #f2f5f9;
+}
+
+// media query breakpoints
+$break-mobile: 23.4375em;
+$break-tablet: 48em;
+$break-desktop: 64em;
+
+// global vars
+// mobile height
+$header-height: 4rem;

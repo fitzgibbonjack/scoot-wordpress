@@ -1,0 +1,28 @@
+@use 'base/reset';
+@use 'base/utility';
+@use 'base/variables';
+@use 'base/mixins';
+
+@use 'modules/hamburger';
+@use 'modules/header';
+@use 'modules/navigation';
+
+html {
+	font-family: "Lexend Deca", Helvetica, sans-serif;
+}
+
+a,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Space Mono", Helvetica, sans-serif;
+	font-weight: 700;
+}
+
+.container {
+	max-width: 69rem;
+}

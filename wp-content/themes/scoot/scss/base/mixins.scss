@@ -1,0 +1,16 @@
+@mixin set-flex($align, $justify, $direction: unset) {
+	display: flex;
+	align-items: $align;
+	justify-content: $justify;
+	flex-direction: $direction;
+}
+
+@mixin reset-list {
+	padding: 0;
+	list-style: none;
+}
+
+@mixin reset-button {
+	border: none;
+	background-color: transparent;
+}
