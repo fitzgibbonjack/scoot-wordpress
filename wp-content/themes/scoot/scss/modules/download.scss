@@ -28,12 +28,14 @@
 	margin-inline: auto;
 }
 
+// tablet
 @media only screen and (min-width: $break-tablet) {
 	.download {
 		padding-block: 3.875rem;
 		background-size: 180%;
 		background-position: bottom center;
 	}
+
 	.download__title {
 		font-size: 3rem;
 		width: 28rem;
@@ -41,6 +43,7 @@
 	}
 }
 
+// desktop
 @media only screen and (min-width: $break-desktop) {
 	.download {
 		padding-block: 6.375rem;
@@ -50,11 +53,13 @@
 			@include set-flex(center, space-between);
 		}
 	}
+
 	.download__title {
 		text-align: left;
 		padding-block-end: 0;
 		margin-inline: unset;
 	}
+
 	.download__links {
 		margin-inline: unset;
 	}

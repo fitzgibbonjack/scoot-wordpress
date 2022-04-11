@@ -1,5 +1,7 @@
 @import "../base/mixins";
 @import "../base/variables";
+$header-height: 4rem;
+$nav-sidebar-width: 16rem;
 
 .header--main {
 	position: fixed;
@@ -26,15 +28,13 @@
 	.header--main {
 		height: 6rem;
 	}
+
 	.header__nav {
 		@include set-flex(center, space-between);
 		gap: 3.6rem;
 		flex-grow: 1;
 	}
 }
-
-// NAVIGATION
-$nav-sidebar-width: 16rem;
 
 .header__links {
 	@include reset-list;

@@ -23,9 +23,10 @@ class Header {
   }
 
   handleScroll() {
+    const tolerance = 96;
     const scrollPosition = window.scrollY;
 
-    if (scrollPosition > this.previousScrollPosition) {
+    if (scrollPosition > tolerance && scrollPosition > this.previousScrollPosition) {
       document.body.classList.add("header-hidden");
     } else {
       document.body.classList.remove("header-hidden");

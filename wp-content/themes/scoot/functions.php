@@ -6,4 +6,8 @@ function theme_files() {
    wp_enqueue_style('wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;300;400;500;700&family=Space+Mono:wght@400;700&display=swap');
 }
 
+function theme_features() {
+   
+}
+
 add_action('wp_enqueue_scripts',  'theme_files');
