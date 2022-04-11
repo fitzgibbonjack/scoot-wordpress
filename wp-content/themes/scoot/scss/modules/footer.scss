@@ -33,8 +33,16 @@
 	width: fit-content;
 	margin-inline: auto;
 	gap: 1.5rem;
+
+	img {
+		transition: filter 0.3s ease-in-out;
+	}
+	a:hover img {
+		filter: brightness(0) saturate(100%) invert(100%);
+	}
 }
 
+// Tablet
 @media only screen and (min-width: $break-tablet) {
 	.footer--main,
 	.footer__links {

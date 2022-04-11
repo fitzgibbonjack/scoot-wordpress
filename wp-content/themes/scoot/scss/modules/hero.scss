@@ -3,7 +3,7 @@
 
 .hero {
 	padding-block: 3.75rem;
-	margin-block-start: 4rem;
+	margin-block-start: $header-mobile;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
@@ -21,7 +21,7 @@
 // Tablet
 @media only screen and (min-width: $break-tablet) {
 	.hero {
-		margin-block-start: 6rem;
+		margin-block-start: $header-tablet;
 		padding-block: 4.5rem;
 		padding-inline: 6rem;
 	}

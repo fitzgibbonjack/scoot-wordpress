@@ -5,6 +5,11 @@
 	flex-direction: $direction;
 }
 
+@mixin set-font-size($size) {
+	font-size: $size;
+	line-height: $size;
+}
+
 @mixin reset-list {
 	padding: 0;
 	list-style: none;

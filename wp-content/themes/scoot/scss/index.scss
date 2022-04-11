@@ -7,8 +7,12 @@
 @use 'modules/download';
 @use 'modules/footer';
 @use 'modules/hero';
+@use 'modules/cta';
 
-html {
+@use 'pages/front';
+
+html,
+p {
 	font-family: "Lexend Deca", Helvetica, sans-serif;
 }
 
@@ -27,4 +31,12 @@ h6 {
 .container {
 	max-width: 69rem;
 	margin-inline: auto;
+}
+
+// Link hover state
+a {
+	transition: color 0.3s ease-in-out;
+	&:hover {
+		color: var(--clr-yellow-400);
+	}
 }

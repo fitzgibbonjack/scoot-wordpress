@@ -16,7 +16,7 @@
 	padding-block-end: 2.5rem;
 	letter-spacing: -1.4px;
 	text-align: center;
-	font-size: 2rem;
+	@include set-font-size(2rem);
 	color: white;
 }
 
@@ -37,9 +37,9 @@
 	}
 
 	.download__title {
-		font-size: 3rem;
-		width: 28rem;
+		@include set-font-size(3rem);
 		margin-inline: auto;
+		width: 28rem;
 	}
 }
 

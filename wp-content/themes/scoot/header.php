@@ -23,9 +23,9 @@
 
          <ul class="header__links" id="menu">
             <li><a href="<?php echo site_url("/about") ?>">About</a></li>
-            <li><a href="<?php get_post_type_archive_link('location') ?>">Locations</a></li>
-            <li><a href="<?php get_post_type_archive_link('career') ?>">Careers</a></li>
-            <li><button class="header__cta" type="button">Get Scootin</button></li>
+            <li><a href="<?php echo site_url("/locations") ?>">Locations</a></li>
+            <li><a href="<?php echo site_url("/careers") ?>">Careers</a></li>
+            <li><?php get_template_part('template_parts/cta'); ?></li>
          </ul>
       </nav>
    </header>

@@ -1,0 +1,23 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.cta {
+	@include reset-button;
+	color: white;
+	padding-block: 0.875rem;
+	padding-inline: 2.375rem;
+	background-color: var(--clr-yellow-400);
+	transition: all 0.3s ease-in-out;
+	border: solid 3px transparent;
+
+	@media only screen and (min-width: $break-tablet) {
+		margin-block-end: 0;
+		padding-inline: 2.4rem;
+	}
+}
+
+.cta:hover {
+	background-color: transparent;
+	border: solid 3px var(--clr-yellow-400);
+	color: var(--clr-yellow-400);
+}
