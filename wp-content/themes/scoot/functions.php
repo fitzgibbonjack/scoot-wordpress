@@ -13,3 +13,16 @@ function theme_features() {
 
 add_action('wp_enqueue_scripts',  'theme_files');
 add_action('after_setup_theme', 'theme_features');
+
+// Hero section
+function get_hero($args) { 
+   $title = $args['title'];
+   $bg_url = $args['bg_url'] ? $args['bg_url'] : get_theme_file_uri('/assets/images/about-hero.jpg');?>
+
+<section class="hero" style="background-image: url(<?php echo $bg_url; ?>)">
+   <div class="hero__inner container">
+      <h1 class="hero__title"><?php echo $title ?></h1>
+   </div>
+</section>
+
+<?php }

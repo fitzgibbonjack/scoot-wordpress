@@ -16,7 +16,7 @@
 		position: absolute;
 		inset-block-end: 4rem;
 		inset-inline: 0;
-		height: 25%;
+		height: 30%;
 
 		background-image: url("/assets/patterns/right-arrow.svg");
 		background-repeat: no-repeat;
@@ -35,19 +35,54 @@
 	font-weight: 300;
 }
 
+// Tablet
 @media only screen and (min-width: $break-tablet) {
 	.home-hero {
+		background-image: url("/assets/images/home-hero-tablet.jpg");
 		height: calc(100vh - $header-tablet);
-		padding-block-start: 8.5rem;
+		padding-block: 8.5rem 13.625rem;
 		padding-inline: 6.125rem;
+		height: unset;
 
 		&::before {
+			background-position: -8rem 92%, 105% 92%;
 			background-image: url("/assets/patterns/right-arrow.svg"),
 				url("/assets/patterns/white-circles.svg");
-			background-position: -8rem 92%, 105% 92%;
 		}
 	}
 	.home-hero__title {
 		@include set-font-size(3.5rem);
+	}
+}
+
+// Desktop
+@media only screen and (min-width: $break-desktop) {
+	.home-hero {
+		background-image: url("/assets/images/home-hero-desktop.jpg");
+		padding-inline: 11%;
+		padding-block: 9.6rem;
+		text-align: left;
+
+		&::before {
+			height: 100%;
+			inset-block-start: 0;
+			background-position: -2% 54.5%, 74% 69.26%, 102% 80%;
+			background-image: url("/assets/patterns/line.svg"),
+				url("/assets/patterns/right-arrow.svg"),
+				url("/assets/patterns/white-circles.svg");
+		}
+	}
+
+	.home-hero__title {
+		max-width: 31.25rem;
+	}
+
+	.home-hero__body {
+		max-width: 31.25rem;
+		padding-inline-start: 6rem;
+	}
+
+	.home-hero__text {
+		margin-block-start: 2.5rem;
 	}
 }
