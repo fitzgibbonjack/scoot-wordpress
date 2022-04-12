@@ -1,4 +1,3 @@
-// SCSS Import
 import "../scss/index.scss";
 
 import Navigation from "./modules/Navigation";

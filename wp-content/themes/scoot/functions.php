@@ -20,7 +20,6 @@ add_action('wp_enqueue_scripts',  'theme_files');
 add_action('after_setup_theme', 'theme_features');
 add_filter('acf/fields/google_map/api', 'google_api_key');
 
-
 /* ------------------- */
 /* TEMPLATE FUNCTIONS */
 /* ----------------- */
@@ -40,12 +39,39 @@ function get_hero($args) {
 
 // Image section
 function get_image_section($args) { ?>
-<section class="image-section" id="<?php echo $args['id']; ?>">
+<?php $flipped = $args['flipped'] ? 'flipped' : ''; ?>
+
+<section class="image-section <?php echo $flipped; ?>" id="<?php echo $args['id']; ?>">
+   <style>
+   <?php echo '#'. $args['id'] . ' ';
+
+   ?>svg {
+      inset: <?php echo $args['overlay']['insetMobile'];
+      ?>;
+   }
+
+   @media only screen and (min-width: 48em) {
+      <?php echo '#'. $args['id'] . ' ';
+
+      ?>svg {
+         inset: <?php echo $args['overlay']['insetTablet'];
+         ?>;
+      }
+   }
+
+   @media only screen and (min-width: 88em) {
+      <?php echo '#'. $args['id'] . ' ';
+
+      ?>svg {
+         inset: <?php echo $args['overlay']['insetDesktop'];
+         ?>;
+      }
+   }
+   </style>
    <div class="image-section__inner container">
       <div class="image-section__image">
          <img src="<?php echo $args['imageUri']; ?>" alt="<?php echo $args['imageAlt']; ?>">
-         <!-- Note: overlay offset to be set in .scss file for page -->
-         <?php echo $args['overlay']; ?>
+         <?php echo $args['overlay']['svg']; ?>
       </div>
 
       <div class="image-section__body">
@@ -74,7 +100,7 @@ function get_numbered_section($args) { ?>
 </section>
 <?php }
 
-// Get <svg> from file
+// Get <svg> from file -> returns string
 function get_svg($file_path) {
    $svg_path = get_theme_file_path($file_path);
    // contents of file as a string
@@ -82,5 +108,6 @@ function get_svg($file_path) {
    // substring containing only <svg> and onwards
    $tag_pos = strpos($svg_file, '<svg');
    $svg = substr($svg_file, $tag_pos);
+   // TO-DO: add aria-hidden = 'true' to svg string
    return $svg;
 }

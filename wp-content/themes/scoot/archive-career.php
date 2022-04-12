@@ -15,7 +15,12 @@ get_image_section(array(
    you&apos;re passionate about our
    mission to provide clean, accessible transport to improve urban living we want to hear from you!',
    'buttonText' => 'Say Hello',
-   'overlay' => get_svg('/assets/patterns/left-downward-arrow.svg'),
+   'overlay' => array(
+      'svg' => get_svg('/assets/patterns/left-downward-arrow.svg'),
+      'insetMobile' => '53% 2%',
+      'insetTablet' => '53% -10rem auto auto',
+      'insetDesktop' => '20rem 0 auto auto'
+   )
 )); ?>
 
 <section class="join-us container">

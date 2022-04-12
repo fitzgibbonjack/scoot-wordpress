@@ -20,8 +20,14 @@
 	background-color: transparent;
 }
 
-@mixin abs-center {
+@mixin abs-center-x {
 	position: absolute;
 	transform: translateX(-50%);
 	left: 50%;
+}
+
+@mixin abs-center-y {
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
 }

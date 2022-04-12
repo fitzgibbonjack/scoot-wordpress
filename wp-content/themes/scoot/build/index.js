@@ -162,7 +162,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/index.scss */ "./scss/index.scss");
 /* harmony import */ var _modules_Navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/Navigation */ "./src/modules/Navigation.js");
 /* harmony import */ var _modules_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/Header */ "./src/modules/Header.js");
-// SCSS Import
 
 
 

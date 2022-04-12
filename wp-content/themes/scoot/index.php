@@ -6,9 +6,4 @@ get_hero(array(
 ));
 ?>
 
-<?php while(have_posts()) {
-   the_post();
-   get_template_part('template_parts/hero');
-} ?>
-
 <?php get_footer(); ?>

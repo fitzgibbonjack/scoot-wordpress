@@ -7,42 +7,42 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-}
+	overflow-x: hidden;
 
-.hero__inner {
-	@include set-flex(center, center);
-	height: 100%;
-}
-
-.hero__title {
-	color: white;
-	@include set-font-size(2.5rem);
+	&__inner {
+		@include set-flex(center, center);
+		height: 100%;
+	}
+	&__title {
+		color: white;
+		@include set-font-size(2.5rem);
+	}
 }
 
 // Tablet
 @media only screen and (min-width: $break-tablet) {
 	.hero {
 		margin-block-start: $header-tablet;
+		margin-block-end: 3rem;
 		padding-block: 4.5rem;
 		padding-inline: 6rem;
-	}
 
-	.hero__inner {
-		@include set-flex(center, flex-start);
-
-		&::after {
-			content: "";
-			background-image: url("/assets/patterns/white-circles.svg");
-			background-position: 105% 50%;
-			background-repeat: no-repeat;
-			position: absolute;
-			inset-inline: 0;
-			height: 100%;
+		&__inner {
+			@include set-flex(center, flex-start);
+			&::after {
+				content: "";
+				background-image: url("/assets/patterns/white-circles.svg");
+				background-size: 100%;
+				background-repeat: no-repeat;
+				@include abs-center-y;
+				right: -2rem;
+				width: 15rem;
+				height: 4.5rem;
+			}
 		}
-	}
-
-	.hero__title {
-		font-size: 3.5rem;
+		&__title {
+			font-size: 3.5rem;
+		}
 	}
 }
 

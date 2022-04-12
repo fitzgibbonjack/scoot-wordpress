@@ -6,6 +6,7 @@
 	padding-block-start: 4.5rem;
 	padding-inline: 2rem;
 	overflow: hidden;
+	margin-block-end: 5rem;
 }
 
 .image-section__image {
@@ -41,10 +42,15 @@
 @media only screen and (min-width: $break-tablet) {
 	.image-section {
 		padding-inline: 6.125rem;
+		margin-block-end: 3rem;
 		background-image: url("/assets/patterns/circle.svg");
 		background-repeat: no-repeat;
 		background-size: 29rem;
 		background-position: right -22rem top 13%;
+	}
+
+	.image-section.flipped {
+		background-position: left -22rem top 13%;
 	}
 
 	.image-section__title {
@@ -58,6 +64,14 @@
 		text-align: left;
 		background-size: 29rem;
 		background-position: right -22rem top 88%;
+		position: relative;
+	}
+
+	.image-section.flipped {
+		background-position: left -22rem top 100%;
+		.image-section__inner {
+			flex-direction: row;
+		}
 	}
 
 	.image-section__inner {

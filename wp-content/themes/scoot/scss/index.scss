@@ -20,6 +20,7 @@
 @use 'pages/front';
 @use 'pages/archive-location';
 @use 'pages/archive-career';
+@use 'pages/page-about';
 
 /* -------------- */
 /* GLOBAL STYLES */
@@ -31,6 +32,8 @@
 body {
 	font-family: "Lexend Deca", Helvetica, sans-serif;
 	color: var(--clr-grey-400);
+	font-size: 0.9375rem;
+	font-weight: 300;
 	text-align: center;
 }
 

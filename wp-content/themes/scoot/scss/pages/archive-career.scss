@@ -1,14 +1,6 @@
 @import "../base/mixins";
 @import "../base/variables";
 
-#careers-1 {
-	margin-block-end: 7.5rem;
-	// Arrow overlay insets
-	.image-section__image svg {
-		inset: 53% 2%;
-	}
-}
-
 .join-us {
 	margin-block-end: 9rem;
 
@@ -27,9 +19,6 @@
 
 // Tablet
 @media only screen and (min-width: $break-tablet) {
-	#careers-1 .image-section__image svg {
-		inset: 53% -10rem auto auto;
-	}
 	.career-listings {
 		padding-inline: 2.375rem;
 	}
@@ -37,9 +26,6 @@
 
 // Desktop
 @media only screen and (min-width: $break-desktop) {
-	#careers-1 .image-section__image svg {
-		inset: 39rem 0 auto auto;
-	}
 	.join-us__title {
 		margin-block-end: 6.5rem;
 	}
