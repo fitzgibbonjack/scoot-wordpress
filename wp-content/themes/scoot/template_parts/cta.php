@@ -1,1 +1,1 @@
-<button class="cta" type="button">Get Scootin</button>
+<button class="button cta" type="button">Get Scootin</button>

@@ -1,0 +1,16 @@
+@import "../base/mixins.scss";
+@import "../base/variables.scss";
+
+.values {
+	@include set-flex(center, space-between, column);
+	gap: 3.5rem;
+}
+
+// Desktop
+@media only screen and (min-width: $break-desktop) {
+	.values {
+		@include set-flex(flex-start, space-between, row);
+		flex-grow: 1;
+		gap: 2rem;
+	}
+}

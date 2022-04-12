@@ -1,7 +1,7 @@
 @import "../base/mixins";
 @import "../base/variables";
 
-.cta {
+.button {
 	@include reset-button;
 	color: white;
 	padding-block: 0.875rem;
@@ -16,7 +16,7 @@
 	}
 }
 
-.cta:hover {
+.button:hover {
 	background-color: transparent;
 	border: solid 3px var(--clr-yellow-400);
 	color: var(--clr-yellow-400);

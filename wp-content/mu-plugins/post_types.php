@@ -26,10 +26,25 @@ function theme_post_types() {
          'all_items' => 'All Career',
          'singular_name' => 'Career'
       ),
-      'menu_icon' => 'dashicons-location-alt',
-      'has_archive' => 'locations',
+      'menu_icon' => 'dashicons-businesswoman',
+      'has_archive' => 'careers',
       'rewrite' => array('slug' => 'careers'),
-      'supports' => array('title', )
+      'supports' => array('title', 'editor')
+   ));
+
+   // Frequently Asked Question
+   register_post_type('question', array(
+      'public' => true,
+      'labels' => array(
+         'name' => 'Questions',
+         'add_new_item' => 'Add New Question',
+         'edit_item' => 'Edit Question',
+         'all_items' => 'All Questions',
+         'singular_name' => 'Question'
+      ),
+      'menu_icon' => 'dashicons-search',
+      'has_archive' => false,
+      'supports' => array('title', 'editor')
    ));
 }
 

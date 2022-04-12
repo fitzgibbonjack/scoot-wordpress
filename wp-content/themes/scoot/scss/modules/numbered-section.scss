@@ -1,0 +1,50 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.numbered-section {
+	padding-inline: 2rem;
+	text-align: center;
+}
+
+.numbered-section__image {
+	position: relative;
+	img {
+		border-radius: 100%;
+		margin-inline: auto;
+		margin-block-end: 4rem;
+	}
+	span {
+		@include set-flex(center, center);
+		background-color: var(--clr-yellow-400);
+		border-radius: 100%;
+		font-family: "Space Mono", sans-serif;
+		color: var(--clr-navy-400);
+		font-size: 1.5rem;
+		font-weight: 700;
+
+		--size: 6rem;
+		width: var(--size);
+		height: var(--size);
+
+		@include abs-center;
+		bottom: -2.5rem;
+	}
+}
+
+.numbered-section__title {
+	margin-block-end: 1.625rem;
+}
+
+// Tablet
+@media only screen and (min-width: $break-tablet) {
+	.numbered-section {
+		padding-inline: 9.75rem;
+	}
+}
+
+// Desktop
+@media only screen and (min-width: $break-desktop) {
+	.numbered-section {
+		padding-inline: 0;
+	}
+}

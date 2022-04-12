@@ -1,3 +1,7 @@
+/* --------------- */
+/* MODULE IMPORTS */
+/* ------------- */
+
 @use 'base/reset';
 @use 'base/variables';
 @use 'base/mixins';
@@ -7,14 +11,30 @@
 @use 'modules/download';
 @use 'modules/footer';
 @use 'modules/hero';
-@use 'modules/cta';
+@use 'modules/button';
+@use 'modules/image-section';
+@use 'modules/numbered-section';
+@use 'modules/values';
 
 @use 'pages/front';
 @use 'pages/locations';
+@use 'pages/careers';
 
-html,
-p {
+/* -------------- */
+/* GLOBAL STYLES */
+/* ------------ */
+
+@import "./base/variables.scss";
+@import "./base/mixins.scss";
+
+body {
 	font-family: "Lexend Deca", Helvetica, sans-serif;
+	color: var(--clr-grey-400);
+	text-align: center;
+}
+
+p {
+	max-width: 36rem;
 }
 
 a,
@@ -29,15 +49,39 @@ h6 {
 	font-weight: 700;
 }
 
+h2 {
+	@include set-font-size(2rem);
+}
+
+h3 {
+	@include set-font-size(1.5rem);
+}
+
+h2,
+h3 {
+	color: var(--clr-navy-400);
+}
+
 .container {
 	max-width: 69rem;
 	margin-inline: auto;
 }
 
-// Link hover state
 a {
 	transition: color 0.3s ease-in-out;
 	&:hover {
 		color: var(--clr-yellow-400);
+	}
+}
+
+@media only screen and (min-width: $break-tablet) {
+	h2 {
+		@include set-font-size(3rem);
+	}
+}
+
+@media only screen and (min-width: $break-desktop) {
+	body {
+		text-align: unset;
 	}
 }
