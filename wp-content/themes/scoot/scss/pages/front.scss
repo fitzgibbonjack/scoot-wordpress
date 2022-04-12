@@ -36,6 +36,7 @@
 
 .home-hero__text {
 	margin-block-end: 2.125rem;
+	margin-inline: auto;
 	font-weight: 300;
 }
 
@@ -67,13 +68,7 @@
 		height: unset;
 
 		&::before {
-			content: "";
-			height: 1rem;
-			position: absolute;
-			inset-inline-end: 86%;
-			inset-block-start: 53%;
-			background-repeat: repeat-x;
-			background-image: url("/assets/patterns/line.svg");
+			all: unset;
 		}
 
 		&::after {
@@ -88,6 +83,21 @@
 			position: absolute;
 			inset-block-start: 53%;
 			inset-inline-end: 0;
+		}
+	}
+
+	.home-hero__inner {
+		position: relative;
+		&::before {
+			content: "";
+			height: 3rem;
+			width: 25vw;
+			position: absolute;
+			inset-inline-end: 120%;
+			inset-block-start: 57.5%;
+			transform: scaleX(1.5);
+			background-repeat: repeat-x;
+			background-image: url("/assets/patterns/line.svg");
 		}
 	}
 

@@ -23,4 +23,12 @@ get_image_section(array(
    <?php get_template_part('template_parts/values'); ?>
 </section>
 
+<ol class="career-listings">
+   <?php
+while (have_posts()) {
+   the_post();
+   get_template_part('template_parts/career');
+} ?>
+</ol>
+
 <?php get_footer(); ?>

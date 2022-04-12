@@ -18,10 +18,20 @@
 	}
 }
 
+.career-listings {
+	@include set-flex(center, space-between, column);
+	margin-block-end: 7.5rem;
+	padding-inline: 2rem;
+	gap: 1rem;
+}
+
 // Tablet
 @media only screen and (min-width: $break-tablet) {
 	#careers-1 .image-section__image svg {
 		inset: 53% -10rem auto auto;
+	}
+	.career-listings {
+		padding-inline: 2.375rem;
 	}
 }
 
@@ -32,5 +42,8 @@
 	}
 	.join-us__title {
 		margin-block-end: 6.5rem;
+	}
+	.career-listings {
+		margin-block-end: 10rem;
 	}
 }

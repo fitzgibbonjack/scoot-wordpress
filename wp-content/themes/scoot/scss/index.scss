@@ -15,10 +15,11 @@
 @use 'modules/image-section';
 @use 'modules/numbered-section';
 @use 'modules/values';
+@use 'modules/career';
 
 @use 'pages/front';
-@use 'pages/locations';
-@use 'pages/careers';
+@use 'pages/archive-location';
+@use 'pages/archive-career';
 
 /* -------------- */
 /* GLOBAL STYLES */
