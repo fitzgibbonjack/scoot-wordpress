@@ -65,7 +65,7 @@ $safe_driving = new WP_Query(array(
    <h2 class="faqs__title">FAQs</h2>
 
    <section class="questions questions--safe">
-      <h3 class="questions__title">Safe driving</h3>
+      <h3 class="questions__title">How it works</h3>
       <div class="questions__container">
          <?php while($how_it_works->have_posts()) {
             $how_it_works->the_post(); 

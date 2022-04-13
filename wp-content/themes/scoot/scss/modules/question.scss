@@ -5,7 +5,14 @@
 	background-color: var(--clr-grey-200);
 	color: var(--clr-navy-400);
 	text-align: left;
+	width: 100%;
 
+	&:hover {
+		cursor: pointer;
+	}
+	&__title {
+		user-select: none;
+	}
 	&__header {
 		@include set-flex(center, space-between);
 		padding: 2rem;
@@ -35,6 +42,7 @@
 	.question__answer {
 		padding: 2rem;
 		padding-block-start: 0;
+
 		// Fixed height allows transition on answer close -- style tradeoff is too much tho
 		height: auto;
 		font-size: revert;
