@@ -1,4 +1,4 @@
-<div class="values">
+<div class="values__inner">
    <?php
 get_numbered_section(array(
    'imageUri' => get_theme_file_uri('/assets/images/our-tech.jpg'),

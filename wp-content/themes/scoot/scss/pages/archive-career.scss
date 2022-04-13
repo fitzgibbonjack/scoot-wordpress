@@ -1,15 +1,6 @@
 @import "../base/mixins";
 @import "../base/variables";
 
-.join-us {
-	margin-block-end: 9rem;
-
-	&__title {
-		margin-block-end: 4rem;
-		text-align: center;
-	}
-}
-
 .career-listings {
 	@include set-flex(center, space-between, column);
 	margin-block-end: 7.5rem;
@@ -26,9 +17,6 @@
 
 // Desktop
 @media only screen and (min-width: $break-desktop) {
-	.join-us__title {
-		margin-block-end: 6.5rem;
-	}
 	.career-listings {
 		margin-block-end: 10rem;
 	}

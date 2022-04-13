@@ -32,8 +32,10 @@ get_image_section(array(
       'insetTablet' => '-1rem auto auto -10rem',
       'insetDesktop' => 'auto auto 10rem 0'
    )
-)); ?>
+));
 
+get_values_section(array(
+   'title' => 'Our Values'
+));
 
-
-<?php get_footer(); ?>
+get_footer(); ?>

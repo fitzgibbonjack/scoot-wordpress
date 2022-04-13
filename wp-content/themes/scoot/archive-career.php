@@ -21,12 +21,13 @@ get_image_section(array(
       'insetTablet' => '53% -10rem auto auto',
       'insetDesktop' => '20rem 0 auto auto'
    )
-)); ?>
+)); 
 
-<section class="join-us container">
-   <h2 class="join-us__title">Why join us?</h2>
-   <?php get_template_part('template_parts/values'); ?>
-</section>
+get_values_section(array(
+   'title' => 'Why join us?'
+));
+
+?>
 
 <ol class="career-listings">
    <?php

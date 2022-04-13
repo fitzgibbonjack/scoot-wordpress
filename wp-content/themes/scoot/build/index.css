@@ -569,10 +569,29 @@ button:hover {
           padding-block-start: 4.5rem;
   padding-inline: 2rem;
   overflow: hidden;
-  -webkit-margin-after: 5rem;
-          margin-block-end: 5rem;
+  -webkit-margin-after: 4rem;
+          margin-block-end: 4rem;
 }
-
+.image-section__title {
+  font-size: 2rem;
+  line-height: 2rem;
+  color: var(--clr-navy-400);
+  -webkit-margin-after: 2rem;
+          margin-block-end: 2rem;
+  letter-spacing: -1.4px;
+}
+.image-section__text {
+  -webkit-margin-after: 2rem;
+          margin-block-end: 2rem;
+  color: var(--clr-grey-400);
+  margin-inline: auto;
+}
+.image-section__overlay {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 .image-section__image {
   position: relative;
 }
@@ -586,47 +605,20 @@ button:hover {
   position: absolute;
 }
 
-.image-section__title {
-  font-size: 2rem;
-  line-height: 2rem;
-  color: var(--clr-navy-400);
-  -webkit-margin-after: 2rem;
-          margin-block-end: 2rem;
-  letter-spacing: -1.4px;
-}
-
-.image-section__text {
-  -webkit-margin-after: 2rem;
-          margin-block-end: 2rem;
-  color: var(--clr-grey-400);
-  margin-inline: auto;
-}
-
-.image-section__overlay {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
 @media only screen and (min-width: 48em) {
   .image-section {
     padding-inline: 6.125rem;
-    -webkit-margin-after: 3rem;
-            margin-block-end: 3rem;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NDUiIGhlaWdodD0iNDQ1Ij48Y2lyY2xlIGN4PSIzMDIuNSIgY3k9IjIyMi41IiByPSIyMjIuNSIgZmlsbD0iI0U1RUNGNCIgZmlsbC1ydWxlPSJldmVub2RkIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtODApIi8+PC9zdmc+);
     background-repeat: no-repeat;
     background-size: 29rem;
     background-position: right -22rem top 13%;
   }
-
-  .image-section.flipped {
-    background-position: left -22rem top 13%;
-  }
-
   .image-section__title {
     font-size: 3rem;
     line-height: 3rem;
+  }
+  .image-section.flipped {
+    background-position: left -22rem top 13%;
   }
 }
 @media only screen and (min-width: 88em) {
@@ -636,14 +628,6 @@ button:hover {
     background-position: right -22rem top 88%;
     position: relative;
   }
-
-  .image-section.flipped {
-    background-position: left -22rem top 100%;
-  }
-  .image-section.flipped .image-section__inner {
-    flex-direction: row;
-  }
-
   .image-section__inner {
     display: flex;
     align-items: center;
@@ -651,7 +635,9 @@ button:hover {
     flex-direction: row-reverse;
     gap: 13.75rem;
   }
-
+  .image-section__body {
+    width: 42%;
+  }
   .image-section__image {
     position: unset;
     overflow: hidden;
@@ -662,9 +648,11 @@ button:hover {
     height: var(--size);
     margin: 0;
   }
-
-  .image-section__body {
-    width: 42%;
+  .image-section.flipped {
+    background-position: left -22rem top 100%;
+  }
+  .image-section.flipped .image-section__inner {
+    flex-direction: row;
   }
 }
 :root {
@@ -737,6 +725,15 @@ button:hover {
 }
 
 .values {
+  -webkit-margin-after: 9rem;
+          margin-block-end: 9rem;
+}
+.values__title {
+  -webkit-margin-after: 4rem;
+          margin-block-end: 4rem;
+  text-align: center;
+}
+.values__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -745,7 +742,12 @@ button:hover {
 }
 
 @media only screen and (min-width: 88em) {
-  .values {
+  .values__title {
+    -webkit-margin-after: 6.5rem;
+            margin-block-end: 6.5rem;
+  }
+
+  .values__inner {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -945,16 +947,6 @@ button:hover {
   --clr-grey-200: #f2f5f9;
 }
 
-.join-us {
-  -webkit-margin-after: 9rem;
-          margin-block-end: 9rem;
-}
-.join-us__title {
-  -webkit-margin-after: 4rem;
-          margin-block-end: 4rem;
-  text-align: center;
-}
-
 .career-listings {
   display: flex;
   align-items: center;
@@ -972,11 +964,6 @@ button:hover {
   }
 }
 @media only screen and (min-width: 88em) {
-  .join-us__title {
-    -webkit-margin-after: 6.5rem;
-            margin-block-end: 6.5rem;
-  }
-
   .career-listings {
     -webkit-margin-after: 10rem;
             margin-block-end: 10rem;

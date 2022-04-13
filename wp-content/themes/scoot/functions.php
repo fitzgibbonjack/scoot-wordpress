@@ -100,6 +100,14 @@ function get_numbered_section($args) { ?>
 </section>
 <?php }
 
+// Values section
+function get_values_section($args) { ?>
+<section class="values container">
+   <h2 class="values__title"><?php echo $args['title'] ?></h2>
+   <?php get_template_part('template_parts/values'); ?>
+</section>
+<?php } 
+
 // Get <svg> from file -> returns string
 function get_svg($file_path) {
    $svg_path = get_theme_file_path($file_path);

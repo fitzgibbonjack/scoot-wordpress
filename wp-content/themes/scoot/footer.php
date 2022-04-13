@@ -21,8 +21,8 @@
 
       <ul class="footer__links">
          <li><a href="<?php echo site_url("/about") ?>">About</a></li>
-         <li><a href="<?php echo site_url("/locations") ?>">Locations</a></li>
-         <li><a href="<?php get_post_type_archive_link('career') ?>">Careers</a></li>
+         <li><a href="<?php echo get_post_type_archive_link('location') ?>">Locations</a></li>
+         <li><a href="<?php echo get_post_type_archive_link('career') ?>">Careers</a></li>
       </ul>
 
       <ul class="footer__socials">

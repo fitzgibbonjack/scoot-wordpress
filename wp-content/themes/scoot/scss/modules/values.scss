@@ -2,13 +2,25 @@
 @import "../base/variables.scss";
 
 .values {
-	@include set-flex(center, space-between, column);
-	gap: 3.5rem;
+	margin-block-end: 9rem;
+
+	&__title {
+		margin-block-end: 4rem;
+		text-align: center;
+	}
+
+	&__inner {
+		@include set-flex(center, space-between, column);
+		gap: 3.5rem;
+	}
 }
 
 // Desktop
 @media only screen and (min-width: $break-desktop) {
-	.values {
+	.values__title {
+		margin-block-end: 6.5rem;
+	}
+	.values__inner {
 		@include set-flex(flex-start, space-between, row);
 		flex-grow: 1;
 		gap: 2rem;
