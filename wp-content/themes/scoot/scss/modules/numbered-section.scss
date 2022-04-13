@@ -4,6 +4,10 @@
 .numbered-section {
 	padding-inline: 2rem;
 	text-align: center;
+
+	&__text {
+		max-width: 30rem;
+	}
 }
 
 .numbered-section__image {

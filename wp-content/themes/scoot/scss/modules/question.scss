@@ -1,0 +1,42 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.question {
+	background-color: var(--clr-grey-200);
+	color: var(--clr-navy-400);
+	text-align: left;
+
+	&__header {
+		@include set-flex(center, space-between);
+		padding: 2rem;
+		gap: 1rem;
+	}
+	&__answer {
+		transition: height 0.5s ease-in-out, font-size 0.5s ease-in-out;
+		margin-block-start: -0.5rem;
+		line-height: 1.67;
+		font-size: 0;
+		height: 0;
+		overflow: clip;
+	}
+	&__toggle {
+		background-color: transparent;
+		border: none;
+		svg {
+			transition: transform 0.5s ease-in-out;
+		}
+	}
+}
+
+.question--open.question {
+	.question__toggle svg {
+		transform: rotate(180deg);
+	}
+	.question__answer {
+		padding: 2rem;
+		padding-block-start: 0;
+		// Fixed height allows transition on answer close -- style tradeoff is too much tho
+		height: auto;
+		font-size: revert;
+	}
+}

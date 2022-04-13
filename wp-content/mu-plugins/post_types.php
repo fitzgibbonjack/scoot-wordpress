@@ -42,9 +42,10 @@ function theme_post_types() {
          'all_items' => 'All Questions',
          'singular_name' => 'Question'
       ),
+      'taxonomies' => array('category'),
       'menu_icon' => 'dashicons-search',
       'has_archive' => false,
-      'supports' => array('title', 'editor')
+      'supports' => array('title', 'editor',)
    ));
 }
 

@@ -16,6 +16,7 @@
 @use 'modules/numbered-section';
 @use 'modules/values';
 @use 'modules/career';
+@use 'modules/question';
 
 @use 'pages/front';
 @use 'pages/archive-location';
@@ -59,6 +60,11 @@ h2 {
 
 h3 {
 	@include set-font-size(1.5rem);
+}
+
+h4 {
+	@include set-font-size(1.125rem);
+	color: var(--clr-navy-400);
 }
 
 h2,

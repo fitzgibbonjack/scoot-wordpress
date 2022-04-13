@@ -36,6 +36,54 @@ get_image_section(array(
 
 get_values_section(array(
    'title' => 'Our Values'
-));
+)); 
 
-get_footer(); ?>
+// Query - all questions w/ 'How it works' category
+$how_it_works = new WP_Query(array(
+   'post_type' => 'question',
+   'tax_query' => array(
+      array(
+         'taxonomy' => 'category',
+         'field' => 'slug',
+         'terms' => 'how-it-works'
+      )
+   )
+));
+// Query - all questions w/ 'Safe driving' category
+$safe_driving = new WP_Query(array(
+   'post_type' => 'question',
+   'tax_query' => array(
+      array(
+         'taxonomy' => 'category',
+         'field' => 'slug',
+         'terms' => 'safe-driving'
+      )
+   )
+)); ?>
+
+<section class="faqs container">
+   <h2 class="faqs__title">FAQs</h2>
+
+   <section class="questions questions--safe">
+      <h3 class="questions__title">Safe driving</h3>
+      <div class="questions__container">
+         <?php while($how_it_works->have_posts()) {
+            $how_it_works->the_post(); 
+            get_template_part('template_parts/question');
+         }
+         wp_reset_postdata(); ?>
+      </div>
+   </section>
+   <section class="questions questions--safe">
+      <h3 class="questions__title">Safe driving</h3>
+      <div class="questions__container">
+         <?php while($safe_driving->have_posts()) {
+            $safe_driving->the_post(); 
+            get_template_part('template_parts/question');
+         }
+         wp_reset_postdata(); ?>
+      </div>
+   </section>
+</section>
+
+<?php get_footer(); ?>

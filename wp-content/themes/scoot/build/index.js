@@ -84,6 +84,52 @@ class Navigation {
 
 /***/ }),
 
+/***/ "./src/modules/Question.js":
+/*!*********************************!*\
+  !*** ./src/modules/Question.js ***!
+  \*********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ Question; }
+/* harmony export */ });
+class Question {
+  constructor() {
+    this.questions = document.querySelectorAll(".question");
+    this.headers = document.querySelectorAll(".question__header");
+    this.toggles = document.querySelectorAll(".question__toggle");
+    this.events();
+  }
+
+  events() {
+    this.headers.forEach(header => {
+      header.addEventListener("click", event => this.handleToggle(event));
+    });
+  }
+
+  handleToggle(event) {
+    const question = event.currentTarget.parentElement;
+
+    if (question.classList.contains("question--open")) {
+      this.closeAnswer(question);
+    } else {
+      this.openAnswer(question);
+    }
+  }
+
+  openAnswer(question) {
+    question.classList.add("question--open");
+  }
+
+  closeAnswer(question) {
+    question.classList.remove("question--open");
+  }
+
+}
+
+/***/ }),
+
 /***/ "./scss/index.scss":
 /*!*************************!*\
   !*** ./scss/index.scss ***!
@@ -162,11 +208,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/index.scss */ "./scss/index.scss");
 /* harmony import */ var _modules_Navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/Navigation */ "./src/modules/Navigation.js");
 /* harmony import */ var _modules_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/Header */ "./src/modules/Header.js");
+/* harmony import */ var _modules_Question__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/Question */ "./src/modules/Question.js");
+
 
 
 
 const navigation = new _modules_Navigation__WEBPACK_IMPORTED_MODULE_1__["default"]();
 const header = new _modules_Header__WEBPACK_IMPORTED_MODULE_2__["default"]();
+const question = new _modules_Question__WEBPACK_IMPORTED_MODULE_3__["default"]();
 }();
 /******/ })()
 ;
