@@ -18,10 +18,11 @@
 @use 'modules/career';
 @use 'modules/question';
 
-@use 'pages/front';
+@use 'pages/front-page';
 @use 'pages/archive-location';
 @use 'pages/archive-career';
 @use 'pages/page-about';
+@use 'pages/single-career';
 
 /* -------------- */
 /* GLOBAL STYLES */

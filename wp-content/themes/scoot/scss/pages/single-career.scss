@@ -1,0 +1,15 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.single-career__content {
+	padding-block: 3rem;
+	padding-inline: 2rem;
+	text-align: justify;
+
+	@media only screen and (min-width: $break-tablet) {
+		padding-block-start: 0;
+	}
+	@media only screen and (min-width: $break-desktop) {
+		padding-inline: 0;
+	}
+}

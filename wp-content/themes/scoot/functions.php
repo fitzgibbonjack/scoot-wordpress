@@ -32,6 +32,9 @@ function get_hero($args) {
 <section class="hero" style="background-image: url(<?php echo $bg_url; ?>)">
    <div class="hero__inner container">
       <h1 class="hero__title"><?php echo $title ?></h1>
+      <?php if ($args['subtitle']) { ?>
+      <span class="hero__subtitle"><?php echo $args['subtitle']; ?></span>
+      <?php } ?>
    </div>
 </section>
 
@@ -59,7 +62,7 @@ function get_image_section($args) { ?>
       }
    }
 
-   @media only screen and (min-width: 88em) {
+   @media only screen and (min-width: 78em) {
       <?php echo '#'. $args['id'] . ' ';
 
       ?>svg {

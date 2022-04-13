@@ -332,7 +332,7 @@ button:hover {
     width: 28rem;
   }
 }
-@media only screen and (min-width: 88em) {
+@media only screen and (min-width: 78em) {
   .download {
     padding-block: 6.375rem;
     background-size: 80%;
@@ -463,6 +463,7 @@ button:hover {
 
 .hero {
   padding-block: 3.75rem;
+  padding-inline: 2rem;
   -webkit-margin-before: 4rem;
           margin-block-start: 4rem;
   background-repeat: no-repeat;
@@ -474,13 +475,17 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: unset;
+  flex-direction: column;
+  gap: 1rem;
   height: 100%;
 }
 .hero__title {
   color: white;
   font-size: 2.5rem;
   line-height: 2.5rem;
+}
+.hero__subtitle {
+  color: white;
 }
 
 @media only screen and (min-width: 48em) {
@@ -490,13 +495,14 @@ button:hover {
     -webkit-margin-after: 3rem;
             margin-block-end: 3rem;
     padding-block: 4.5rem;
-    padding-inline: 6rem;
+    padding-inline: 4rem;
   }
   .hero__inner {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: unset;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
   }
   .hero__inner::after {
     content: "";
@@ -513,8 +519,12 @@ button:hover {
   .hero__title {
     font-size: 3.5rem;
   }
+  .hero__subtitle {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
 }
-@media only screen and (min-width: 88em) {
+@media only screen and (min-width: 78em) {
   .hero__inner::after {
     background-position: 102% 50%;
   }
@@ -538,6 +548,7 @@ button:hover {
   background-color: var(--clr-yellow-400);
   transition: all 0.3s ease-in-out;
   border: solid 3px transparent;
+  text-decoration: none;
 }
 @media only screen and (min-width: 48em) {
   .button {
@@ -621,7 +632,7 @@ button:hover {
     background-position: left -22rem top 13%;
   }
 }
-@media only screen and (min-width: 88em) {
+@media only screen and (min-width: 78em) {
   .image-section {
     text-align: left;
     background-size: 29rem;
@@ -712,7 +723,7 @@ button:hover {
     padding-inline: 9.75rem;
   }
 }
-@media only screen and (min-width: 88em) {
+@media only screen and (min-width: 78em) {
   .numbered-section {
     padding-inline: 0;
   }
@@ -744,7 +755,7 @@ button:hover {
   gap: 3.5rem;
 }
 
-@media only screen and (min-width: 88em) {
+@media only screen and (min-width: 78em) {
   .values__title {
     -webkit-margin-after: 6.5rem;
             margin-block-end: 6.5rem;
@@ -948,7 +959,7 @@ button:hover {
     line-height: 3.5rem;
   }
 }
-@media only screen and (min-width: 88em) {
+@media only screen and (min-width: 78em) {
   .home-hero {
     background-image: url(images/home-hero-desktop.17b79cd6.jpg);
     padding-inline: 11%;
@@ -964,7 +975,7 @@ button:hover {
     height: 10rem;
     width: 50vw;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NTIiIGhlaWdodD0iMTUxIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZT0iI0ZDQjcyQiIgc3Ryb2tlLWxpbmVqb2luPSJiZXZlbCIgc3Ryb2tlLXdpZHRoPSIxNSI+PHBhdGggZD0iTTQwNy45NTIgMTQ1LjQ0NGwzOC40MjYtMzguNDI2LTM4LjQyNi0zOC40MjYiLz48cGF0aCBkPSJNMCA4aDI3MC4xMTV2OTkuMzY5aDE3Ni4yNjMiLz48L2c+PC9zdmc+), url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMzQiIGhlaWdodD0iNjMiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGNpcmNsZSBjeD0iMzEiIGN5PSIzMS41IiByPSIyOS41IiBzdHJva2U9IiNGRkYiIHN0cm9rZS13aWR0aD0iMyIvPjxjaXJjbGUgY3g9IjExNyIgY3k9IjMxLjUiIHI9IjI5LjUiIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIzIi8+PGNpcmNsZSBjeD0iMjAzIiBjeT0iMzEuNSIgcj0iMzEiIGZpbGw9IiNGRkYiLz48L2c+PC9zdmc+);
-    background-position: 8% 69.26%, 102% 80%;
+    background-position: 30% 69.26%, 102% 80%;
     background-repeat: no-repeat;
     position: absolute;
     inset-block-start: 53%;
@@ -979,7 +990,7 @@ button:hover {
     height: 3rem;
     width: 25vw;
     position: absolute;
-    inset-inline-end: 120%;
+    inset-inline-end: 110%;
     inset-block-start: 57.5%;
     transform: scaleX(1.5);
     background-repeat: repeat-x;
@@ -999,6 +1010,15 @@ button:hover {
   .home-hero__text {
     -webkit-margin-before: 2.5rem;
             margin-block-start: 2.5rem;
+  }
+}
+@media only screen and (min-width: 96em) {
+  .home-hero::after {
+    background-position: 10% 69.26%, 102% 80%;
+  }
+
+  .home-hero__inner::before {
+    inset-inline-end: 120%;
   }
 }
 :root {
@@ -1027,7 +1047,7 @@ button:hover {
     padding-inline: 2.375rem;
   }
 }
-@media only screen and (min-width: 88em) {
+@media only screen and (min-width: 78em) {
   .career-listings {
     -webkit-margin-after: 10rem;
             margin-block-end: 10rem;
@@ -1079,7 +1099,7 @@ button:hover {
     line-height: 2.25rem;
   }
 }
-@media only screen and (min-width: 88em) {
+@media only screen and (min-width: 78em) {
   .questions {
     display: -ms-grid;
     display: grid;
@@ -1088,6 +1108,33 @@ button:hover {
     padding: 0;
   }
 }
+:root {
+  --clr-yellow-400: #fcb72b;
+  --clr-yellow-300: #fff4df;
+  --clr-navy-500: #333a44;
+  --clr-navy-400: #495567;
+  --clr-grey-400: #939caa;
+  --clr-grey-300: #e5ecf4;
+  --clr-grey-200: #f2f5f9;
+}
+
+.single-career__content {
+  padding-block: 3rem;
+  padding-inline: 2rem;
+  text-align: justify;
+}
+@media only screen and (min-width: 48em) {
+  .single-career__content {
+    -webkit-padding-before: 0;
+            padding-block-start: 0;
+  }
+}
+@media only screen and (min-width: 78em) {
+  .single-career__content {
+    padding-inline: 0;
+  }
+}
+
 /* --------------- */
 /* MODULE IMPORTS */
 /* ------------- */
@@ -1163,7 +1210,7 @@ a:hover {
     line-height: 3rem;
   }
 }
-@media only screen and (min-width: 88em) {
+@media only screen and (min-width: 78em) {
   body {
     text-align: unset;
   }
