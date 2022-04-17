@@ -45,7 +45,8 @@ function theme_post_types() {
       'taxonomies' => array('category'),
       'menu_icon' => 'dashicons-search',
       'has_archive' => false,
-      'supports' => array('title', 'editor',)
+      'supports' => array('title', 'editor',),
+      'publicly_queryable' => false
    ));
 }
 

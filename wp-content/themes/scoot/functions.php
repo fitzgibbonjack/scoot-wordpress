@@ -82,7 +82,7 @@ function get_image_section($args) { ?>
          <p class="image-section__text"><?php echo $args['text']; ?></p>
 
          <?php if($args['buttonText']) { ?>
-         <button class="image-section__button button" type="button">Say Hello</button>
+         <button class="image-section__button button" type="button"><?php echo $args['buttonText']; ?></button>
          <?php } ?>
       </div>
    </div>

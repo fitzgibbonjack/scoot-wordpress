@@ -901,6 +901,45 @@ button:hover {
   --clr-grey-200: #f2f5f9;
 }
 
+.getting-started {
+  margin-block: 7rem 3.5rem;
+  padding-inline: 2rem;
+}
+.getting-started__item svg {
+  transform: scale(0.6);
+}
+.getting-started__title {
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  -webkit-margin-after: 1.5rem;
+          margin-block-end: 1.5rem;
+}
+
+@media only screen and (min-width: 48em) {
+  .getting-started__item {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[2];
+    grid-template-columns: repeat(2, auto);
+    -ms-grid-rows: (auto)[2];
+    grid-template-rows: repeat(2, auto);
+  }
+  .getting-started__item svg {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+  }
+}
+:root {
+  --clr-yellow-400: #fcb72b;
+  --clr-yellow-300: #fff4df;
+  --clr-navy-500: #333a44;
+  --clr-navy-400: #495567;
+  --clr-grey-400: #939caa;
+  --clr-grey-300: #e5ecf4;
+  --clr-grey-200: #f2f5f9;
+}
+
 .home-hero {
   background-image: url(images/home-hero-mobile.e7c7b289.jpg);
   height: calc(100vh - 4rem);
@@ -941,6 +980,11 @@ button:hover {
           margin-block-end: 2.125rem;
   margin-inline: auto;
   font-weight: 300;
+}
+
+#home-3 {
+  -webkit-margin-after: 7.5rem;
+          margin-block-end: 7.5rem;
 }
 
 @media only screen and (min-width: 48em) {
@@ -1070,8 +1114,8 @@ button:hover {
 
 .questions {
   padding-inline: 2rem;
-  -webkit-margin-after: 3rem;
-          margin-block-end: 3rem;
+  -webkit-margin-after: 7.5rem;
+          margin-block-end: 7.5rem;
 }
 .questions__title {
   -webkit-margin-after: 2rem;

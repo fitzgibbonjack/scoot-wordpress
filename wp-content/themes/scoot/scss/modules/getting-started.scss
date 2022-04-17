@@ -1,0 +1,30 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.getting-started {
+	margin-block: 7rem 3.5rem;
+	padding-inline: 2rem;
+
+	&__item {
+		svg {
+			transform: scale(0.6);
+		}
+	}
+	&__title {
+		@include set-font-size(1.3rem);
+		margin-block-end: 1.5rem;
+	}
+}
+
+// Tablet
+@media only screen and (min-width: $break-tablet) {
+	.getting-started__item {
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+		grid-template-rows: repeat(2, auto);
+
+		svg {
+			grid-row: 1 / 3;
+		}
+	}
+}
