@@ -119,6 +119,7 @@ function get_svg($file_path) {
    // substring containing only <svg> and onwards
    $tag_pos = strpos($svg_file, '<svg');
    $svg = substr($svg_file, $tag_pos);
-   // TO-DO: add aria-hidden = 'true' to svg string
+   // add aria-hidden = 'true' to svg string
+   $svg = substr_replace($svg, ' aria-hidden="true "', 4, 0);
    return $svg;
 }
