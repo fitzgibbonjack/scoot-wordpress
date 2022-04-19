@@ -14,7 +14,8 @@
    </div>
 </section>
 
-<?php 
+<main>
+   <?php 
 get_template_part('template_parts/getting-started');
 
 get_image_section(array(
@@ -61,6 +62,7 @@ get_image_section(array(
       'insetTablet' => '53% -10rem auto auto',
       'insetDesktop' => '20rem 0 auto auto'
    )
-));
+)); ?>
+</main>
 
-get_footer(); ?>
+<?php get_footer(); ?>

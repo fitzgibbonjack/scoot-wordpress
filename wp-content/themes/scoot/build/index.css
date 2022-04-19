@@ -496,6 +496,7 @@ button:hover {
             margin-block-end: 3rem;
     padding-block: 4.5rem;
     padding-inline: 4rem;
+    text-align: left;
   }
   .hero__inner {
     display: flex;
@@ -1213,6 +1214,35 @@ button:hover {
   }
 }
 
+:root {
+  --clr-yellow-400: #fcb72b;
+  --clr-yellow-300: #fff4df;
+  --clr-navy-500: #333a44;
+  --clr-navy-400: #495567;
+  --clr-grey-400: #939caa;
+  --clr-grey-300: #e5ecf4;
+  --clr-grey-200: #f2f5f9;
+}
+
+.error {
+  padding-block: 4.5rem 7.5rem;
+  padding-inline: 2rem;
+}
+.error__text {
+  -webkit-margin-after: 2rem;
+          margin-block-end: 2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+.error__button {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 48em) {
+  .error {
+    padding-inline: 0;
+  }
+}
 /* --------------- */
 /* MODULE IMPORTS */
 /* ------------- */

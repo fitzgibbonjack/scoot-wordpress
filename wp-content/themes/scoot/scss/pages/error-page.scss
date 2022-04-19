@@ -1,0 +1,21 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.error {
+	padding-block: 4.5rem 7.5rem;
+	padding-inline: 2rem;
+	&__text {
+		margin-block-end: 2rem;
+		@include set-font-size(1.4rem);
+	}
+	&__button {
+		display: inline-block;
+	}
+}
+
+// Tablet
+@media only screen and (min-width: $break-tablet) {
+	.error {
+		padding-inline: 0;
+	}
+}

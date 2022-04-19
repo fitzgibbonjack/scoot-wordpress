@@ -9,8 +9,8 @@ get_hero(array(
 ));
 ?>
 
-<div class="single-career__content container">
+<main class="single-career__content container">
    <?php echo get_the_content(); ?>
-</div>
+</main>
 
 <?php get_footer(); ?>
