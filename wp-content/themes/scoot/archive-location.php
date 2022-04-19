@@ -11,11 +11,8 @@ get_hero(array(
    <?php echo do_shortcode("[display-map id='100']"); ?>
    <ol class="locations__list">
       <?php while (have_posts()) {
-         the_post();
-         $lat = get_field('location')['lat'];
-         $lng = get_field('location')['lng']; ?>
-      <li class="locations__item" data-lat="<?php echo $lat; ?>" data-lng="<?php echo $lng; ?>">
-         <!-- e.g London, UK -> London -->
+         the_post(); ?>
+      <li class="locations__item">
          <?php echo strtok(get_the_title(), ','); ?>
       </li>
       <?php } ?>

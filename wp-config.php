@@ -19,17 +19,17 @@
  */
 
 // ** Database settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define( 'DB_NAME', 'wp_ScootWP_db' );
-
-/** Database username */
-define( 'DB_USER', 'wp_ScootWP_user' );
-
-/** Database password */
-define( 'DB_PASSWORD', 'wp_ScootWP_pw' );
-
-/** Database hostname */
-define( 'DB_HOST', 'localhost:8889' );
+if (strstr($_SERVER['SERVER_NAME'], 'scoot-wp:8890')) {
+   define( 'DB_NAME', 'wp_ScootWP_db' );
+   define( 'DB_USER', 'wp_ScootWP_user' );
+   define( 'DB_PASSWORD', 'wp_ScootWP_pw' );
+   define( 'DB_HOST', 'localhost:8889' );
+} else {
+   define( 'DB_NAME', 'id18807750_scoot' );
+   define( 'DB_USER', 'id18807750_admin' );
+   define( 'DB_PASSWORD', '/XuaWj44X!jz(e2[' );
+   define( 'DB_HOST', 'localhost' );
+}
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
