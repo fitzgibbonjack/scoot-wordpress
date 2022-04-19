@@ -47,6 +47,11 @@
 	.getting-started {
 		padding-inline: 0;
 		flex-direction: row;
+		gap: 5rem;
+
+		&__copy {
+			text-align: justify;
+		}
 	}
 
 	.getting-started__item {

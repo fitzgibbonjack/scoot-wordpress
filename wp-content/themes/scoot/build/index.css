@@ -954,6 +954,10 @@ button:hover {
   .getting-started {
     padding-inline: 0;
     flex-direction: row;
+    gap: 5rem;
+  }
+  .getting-started__copy {
+    text-align: justify;
   }
 
   .getting-started__item {
