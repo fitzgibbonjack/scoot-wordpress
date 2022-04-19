@@ -4,6 +4,7 @@
 .button {
 	@include reset-button;
 	color: white;
+	display: inline-block;
 	padding-block: 0.875rem;
 	padding-inline: 2.375rem;
 	background-color: var(--clr-yellow-400);

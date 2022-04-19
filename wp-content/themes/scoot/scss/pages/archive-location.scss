@@ -1,0 +1,81 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.locations,
+.not-listed {
+	padding-inline: 2rem;
+}
+
+.locations {
+	margin-block-start: 4.5rem;
+	&__list {
+		@include reset-list;
+		margin-block-start: 2.5rem;
+		@include set-flex(center, space-between, column);
+		gap: 1rem;
+	}
+	&__item {
+		background-color: var(--clr-yellow-300);
+		color: var(--clr-navy-400);
+		font-size: 1.5rem;
+		width: 100%;
+		font-weight: 700;
+		padding-block: 1.375rem;
+	}
+	&__map {
+		width: 100%;
+	}
+}
+
+.not-listed {
+	margin-block: 4.5rem;
+
+	&__title,
+	&__text {
+		margin-block-end: 2rem;
+	}
+}
+
+// Tablet
+@media only screen and (min-width: $break-tablet) {
+	.locations {
+		margin-block: 9rem 4rem;
+		&__list {
+			display: none;
+		}
+	}
+
+	.not-listed {
+		padding-inline: 6.125rem;
+		margin-block-end: 7.5rem;
+		&__title,
+		&__text {
+			margin-block-end: 2.5rem;
+		}
+	}
+}
+
+// Desktop
+@media only screen and (min-width: $break-desktop) {
+	.locations,
+	.not-listed {
+		padding-inline: 0;
+	}
+	.not-listed {
+		display: grid;
+		column-gap: 6rem;
+		margin-block: 7.5rem;
+		grid-template-columns: 1.5fr 2fr 0.7fr;
+
+		&__title,
+		&__text {
+			margin-block-end: 0;
+		}
+
+		&__button {
+			align-self: center;
+			margin-inline: auto;
+			padding-inline: 1.5rem;
+		}
+	}
+}
