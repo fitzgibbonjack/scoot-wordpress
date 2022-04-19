@@ -15,12 +15,8 @@ function google_api_key($api) {
    return $api;
 }
 
-add_action('wp_enqueue_scripts',  'theme_files');
-add_action('after_setup_theme', 'theme_features');
-add_filter('acf/fields/google_map/api', 'google_api_key');
-
-// Snippet from: https://webdesignviews.com/clean-up-wordpress-header/
 function wdv_cleanup () {
+   // Snippet from: https://webdesignviews.com/clean-up-wordpress-header/
    remove_action('wp_head', 'wlwmanifest_link'); // remove wlwmanifest.xml (needed to support windows live writer)
    remove_action('wp_head', 'wp_generator'); // remove wordpress version
    remove_action('wp_head', 'rsd_link'); // remove really simple discovery link
@@ -37,7 +33,19 @@ function wdv_cleanup () {
    remove_action('rest_api_init', 'wp_oembed_register_route'); // remove the oEmbed REST API route
    remove_filter('oembed_dataparse', 'wp_filter_oembed_result', 10); // don't filter oEmbed results
 }
+
+function admin_cleanup() {
+   remove_menu_page('edit.php'); // removes 'Posts' from sidebar
+   remove_menu_page('upload.php'); // removes 'Media' from sidebar
+   remove_menu_page('edit-comments.php'); // removes 'Comments' from sidebar
+}
+
+add_action('wp_enqueue_scripts',  'theme_files');
+add_action('after_setup_theme', 'theme_features');
+add_filter('acf/fields/google_map/api', 'google_api_key');
 add_action('after_setup_theme', 'wdv_cleanup');
+add_action('admin_menu', 'admin_cleanup');
+
 
 /* ------------------- */
 /* TEMPLATE FUNCTIONS */
